@@ -1,0 +1,335 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fjalla+One&family=Lobster&family=Open+Sans:wght@400;600;700&family=PT+Sans&family=Poppins:wght@300&family=The+Nautigal&family=Waterfall&display=swap');
+
+
+
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   color: white;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+.logo{
+    text-align: center;
+}
+.img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: relative;
+        animation: img;
+        animation-duration: 3s;
+        animation-delay: 3s;
+        animation-fill-mode:forwards;
+}
+@keyframes img {
+    100%{transform: rotateY(180deg);
+    box-shadow: 0 0 100px rgba(45, 139, 239, 0.865);}
+
+}
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 25vh;
+    background-color:rgba(0, 0, 0, 0.814);
+    align-items: center;
+  width: 100%;
+  position:relative;
+  animation: heading;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heading {
+    0%{top: -100px;}
+    100%{top: 0px;}
+}
+
+
+
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+ul li{
+    list-style-type: none;
+    margin-top: 10px;
+    border: 5px solid rgba(45, 139, 239, 0.229);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    transition-property:border;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+}
+
+li:hover{
+    border: 5px solid grey;
+
+}
+
+
+li a{
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.toggle-button {
+    position: absolute;
+    top: 30px;
+    right: 1rem;
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width:100%;
+height: 100%;
+text-align: center;
+filter: blur(0.5px);
+position: relative;
+animation-name: content;
+animation-duration: 4s;
+animation-fill-mode: forwards;
+}
+@keyframes content {
+    0%{left: -900px;}
+    100%{left: 0px;}
+}
+
+.container > h1{
+    color:white;
+    font-size: 90px;
+    font-weight: 600;
+    box-shadow: 0 0 100px black;
+    border-radius: 20px;
+      margin-top: 10%;
+    padding: 10px;
+ background: rgba(2, 2, 2, 0.752);
+}
+
+
+.background{
+background-image: url(https://i.postimg.cc/1t9mpfv2/spoon.jpg);
+    background-repeat:no-repeat;
+        background-size: 100% 100%;
+        height:auto;
+            width: 100%;
+            background-attachment:fixed;
+}
+
+
+@media (max-width :580px) {
+    .navbar{
+        width: 100%;
+        height:auto;
+       display: flex;
+       flex-direction:row;
+       justify-content: space-around;
+       align-items: center;
+    }
+    .logo{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .logo > h1{
+        margin-left: 10px;
+    }
+         .toggle-button {
+             display: flex;
+         }
+
+         .navbar-links {
+             display:none;
+             width: 70%;
+
+         }
+
+         .navbar {
+             flex-direction: column;
+             align-items:flex-start;
+         }
+
+         .navbar-links ul {
+             width: 100%;
+             flex-direction: column;
+
+         }
+
+         .navbar.links li {
+             text-align: center;
+         }
+
+         .navbar-links a {
+             padding: 0.5rem 1rem;
+         }
+
+         .navbar-links.active {
+             display: flex;
+
+         }
+    .container{
+        align-items: center;
+        margin: 10px;
+        margin-top: 150px;
+
+    }
+   .container>h1 {
+       font-size: 70px;
+   }
+
+}
+
+
+
+@media (max-width:768px) {
+    .navbar {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .logo>h1 {
+            margin-left: 10px;
+        }
+
+        .toggle-button {
+            display: flex;
+        }
+
+        .navbar-links {
+            display: none;
+            width: 70%;
+
+        }
+
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .navbar-links ul {
+            width: 100%;
+            flex-direction: column;
+
+        }
+
+        .navbar.links li {
+            text-align: center;
+        }
+
+        .navbar-links a {
+            padding: 0.5rem 1rem;
+        }
+
+        .navbar-links.active {
+            display: flex;
+
+        }
+
+        .container {
+            align-items: center;
+            margin: 10px;
+            margin-top: 150px;
+
+        }
+    .container>h1 {
+         font-size: 40px;
+       margin-top: 0%;
+        }
+}
+@media (max-width:380px) {
+
+   .container {
+     width:90%;
+  }
+     .container > h1{
+    font-size: 30px;
+   }
+}
+
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body class="background">
+ <div class="nav navbar">
+    <div class="logo"> <img class="img" src="https://i.postimg.cc/hPdTh56w/snack-1.jpg" alt="">
+     <h1>Resturant</h1></div>
+
+    <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+<div class="navbar-links"><ul>
+        <li><a href="">Home</a></li>
+        <li><a href="foodmenu">Menu</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="contact">Contact</a></li>
+    </ul></div>
+
+
+ </div>
+
+
+ <div class="container" id="home_section">
+  <h1 class="text">The Home Of Good Food</h1>
+ </div>
+
+
+
+
+
+
+<script src="./script.js">
+
+
+
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+})
+</script>
+</body>
+</html>
